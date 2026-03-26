@@ -6,12 +6,21 @@ using namespace std;
 
 int main()
 {
-    // TODO: declare variable n for the exponent input
+    int exp, flag = 0;
+    cin >> exp;
+    double power = 1.0;
+    
+    if (exp < 0){
+        exp = -exp;
+        flag = 1; 
+    }
 
-    // TODO: read n from standard input
-
-    // TODO: compute 2 to the power of n using a loop (no cmath pow)
-    // For positive n: multiply result by 2, n times
-    // For negative n: divide result by 2, |n| times
-
+    for (int i = 0; i < exp; i++)
+        power *= 2;
+    if (flag ==1)
+        power = 1/power;
+    cout << fixed << setprecision(2);
+    cout << "Power of 2: " << power << endl;
+        
 }
+
