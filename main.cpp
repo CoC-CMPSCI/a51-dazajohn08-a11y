@@ -19,7 +19,7 @@ int main()
         power *= 2;
     if (flag ==1)
         power = 1/power;
-    cout << fixed << setprecision(2);
+    cout << fixed << setprecision(5);
     cout << "Power of 2: " << power << endl;
         
 }
